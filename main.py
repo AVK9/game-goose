@@ -154,3 +154,7 @@ while plain:
         for bonus in bonuses:
             if bonus[1].bottom > HEIGHT:
                 bonuses.pop(bonuses.index(bonus))
+
+@app.route("/")
+def index():
+    return "This is a placeholder for the game. Please run the game locally."
