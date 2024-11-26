@@ -2,16 +2,6 @@ import random
 import os
 import pygame
 from pygame.constants import QUIT, K_DOWN, K_UP, K_LEFT, K_RIGHT
-from flask import Flask, render_template
-
-app = Flask(__name__)
-
-@app.route("/")
-def index():
-    return "Game is not yet adapted for web"
-
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
 
 pygame.init()
 
@@ -154,7 +144,3 @@ while plain:
         for bonus in bonuses:
             if bonus[1].bottom > HEIGHT:
                 bonuses.pop(bonuses.index(bonus))
-
-@app.route("/")
-def index():
-    return "This is a placeholder for the game. Please run the game locally."
